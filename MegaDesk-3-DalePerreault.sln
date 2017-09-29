@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk-3-DalePerreault", "MegaDesk-3-DalePerreault\MegaDesk-3-DalePerreault.csproj", "{9AFE9568-9D63-4759-BACC-77A27A01307A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AFE9568-9D63-4759-BACC-77A27A01307A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFE9568-9D63-4759-BACC-77A27A01307A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFE9568-9D63-4759-BACC-77A27A01307A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFE9568-9D63-4759-BACC-77A27A01307A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6608E4AF-943C-4E05-BB06-9FB5558C320D}
+	EndGlobalSection
+EndGlobal
