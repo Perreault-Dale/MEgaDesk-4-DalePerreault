@@ -28,69 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
+            this.addQuote = new System.Windows.Forms.Button();
+            this.viewQuote = new System.Windows.Forms.Button();
+            this.searchQuote = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // addQuote
             // 
-            this.button1.Location = new System.Drawing.Point(48, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 57);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add New Quote";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addQuote.Location = new System.Drawing.Point(48, 79);
+            this.addQuote.Name = "addQuote";
+            this.addQuote.Size = new System.Drawing.Size(192, 57);
+            this.addQuote.TabIndex = 0;
+            this.addQuote.Text = "Add New Quote";
+            this.addQuote.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // viewQuote
             // 
-            this.button2.Location = new System.Drawing.Point(48, 189);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 57);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View Quotes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.viewQuote.Location = new System.Drawing.Point(48, 189);
+            this.viewQuote.Name = "viewQuote";
+            this.viewQuote.Size = new System.Drawing.Size(192, 57);
+            this.viewQuote.TabIndex = 1;
+            this.viewQuote.Text = "View Quotes";
+            this.viewQuote.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // searchQuote
             // 
-            this.button3.Location = new System.Drawing.Point(48, 299);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 57);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Search Quotes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.searchQuote.Location = new System.Drawing.Point(48, 299);
+            this.searchQuote.Name = "searchQuote";
+            this.searchQuote.Size = new System.Drawing.Size(192, 57);
+            this.searchQuote.TabIndex = 2;
+            this.searchQuote.Text = "Search Quotes";
+            this.searchQuote.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // exit
             // 
-            this.button4.Location = new System.Drawing.Point(48, 409);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 57);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Exit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.exit.Location = new System.Drawing.Point(48, 409);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(192, 57);
+            this.exit.TabIndex = 3;
+            this.exit.Text = "Exit";
+            this.exit.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(267, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(339, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 529);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.searchQuote);
+            this.Controls.Add(this.viewQuote);
+            this.Controls.Add(this.addQuote);
             this.Name = "MainMenu";
             this.Text = "MegaDesk";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addQuote;
+        private System.Windows.Forms.Button viewQuote;
+        private System.Windows.Forms.Button searchQuote;
+        private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
