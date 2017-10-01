@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace MegaDesk_3_DalePerreault
 {
@@ -12,13 +13,14 @@ namespace MegaDesk_3_DalePerreault
         private int price { get; set; }
 
         // constructor method
-        public Deskquote(string name, int days, DateTime date, int wide, int deep, int draw, Surface surface)
+        public Deskquote(string name, int days, int wide, int deep, int draw, Surface surface)
         {
             custName = name;
             custDesk = new Desk(wide, deep, draw, surface);
             prodDays = days;
-            orderDate = date;
+            orderDate = DateTime.Today;
             price = 200;
+            calcPrice(custDesk, prodDays);
         }
 
         // add surface charge
@@ -88,6 +90,13 @@ namespace MegaDesk_3_DalePerreault
         public void calcPrice(Desk desk, int rush)
         {
             price = price + addDrawers(desk) + addRush(desk, rush) + addSurcharge(desk) + addSurface(desk);
+        }
+
+        public void writeQuote()
+        {
+            StreamWriter sw = new StreamWriter("quotes.txt");
+            sw.WriteLine(this.ToString());
+            sw.Close();
         }
     }
 }
