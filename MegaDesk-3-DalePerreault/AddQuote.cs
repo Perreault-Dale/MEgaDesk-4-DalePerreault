@@ -6,32 +6,25 @@ namespace MegaDesk_4_DalePerreault
 {
     public partial class AddQuote : Form
     {
-        static Dictionary<string, DesktopMaterial> dict = new Dictionary<string, DesktopMaterial>
-        {
-            {"Laminate",DesktopMaterial.Laminate },
-            {"Oak",DesktopMaterial.Oak },
-            {"Rosewood",DesktopMaterial.Rosewood },
-            {"Veneer",DesktopMaterial.Veneer },
-            {"Pine",DesktopMaterial.Pine }
-        };
+        private static List<DesktopMaterial> materials = new List<DesktopMaterial>();
 
         public AddQuote()
         {
-            InitializeComponent();
-            List<DesktopMaterial> materials = new List<DesktopMaterial>();
-            foreach(DesktopMaterial dm in Enum.GetValues(typeof(DesktopMaterial)))
+            foreach (DesktopMaterial dm in Enum.GetValues(typeof(DesktopMaterial)))
             {
-                materials.Add(dm);
+                Materials.Add(dm);
             }
+            InitializeComponent();
             // var message = string.Join(Environment.NewLine, materials);
             // MessageBox.Show(message);
         }
 
+        internal static List<DesktopMaterial> Materials { get => materials; set => materials = value; }
+
         private void cancelButton_click(object sender, EventArgs e)
         {
-            MainMenu main = new MainMenu();
-            main.Show();
             this.Close();
+            FormProvider.menu1.Show();
         }
 
         private void rusCheckBox_click(object sender, EventArgs e)
@@ -50,8 +43,9 @@ namespace MegaDesk_4_DalePerreault
                 int draw = Convert.ToInt32(drawTextBox.Text);
                 int days;
                 if (!rushCheckBox.Checked) { days = Convert.ToInt32(rushComboBox.SelectedValue); } else { days = 14; }
-                DesktopMaterial surface = dict[surfaceComboBox.SelectedValue.ToString()];
+                DesktopMaterial surface = (DesktopMaterial)surfaceComboBox.SelectedValue;
                 Deskquote dq = new Deskquote(name, wide, deep, days, draw, surface);
+                MessageBox.Show(dq.ToString());
                 dq.writeQuote();
                 MessageBox.Show("Your order submitted successfully. We will complete the order in " + days + " days.", "Order Submitted");
             }
@@ -61,9 +55,8 @@ namespace MegaDesk_4_DalePerreault
             }
             finally
             {
-                MainMenu main = new MainMenu();
-                main.Show();
                 this.Close();
+                FormProvider.menu1.Show();
             }
         }
     }

@@ -16,7 +16,7 @@ namespace MegaDesk_4_DalePerreault
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(FormProvider.menu1);
         }
     }
 }

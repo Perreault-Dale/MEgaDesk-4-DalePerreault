@@ -1,4 +1,6 @@
-﻿namespace MegaDesk_4_DalePerreault
+﻿using System.Collections.Generic;
+
+namespace MegaDesk_4_DalePerreault
 {
     partial class AddQuote
     {
@@ -28,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.custNameLabel = new System.Windows.Forms.Label();
             this.custNameBox = new System.Windows.Forms.TextBox();
             this.drawTextBox = new System.Windows.Forms.TextBox();
@@ -44,8 +45,6 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.surfaceComboBox = new System.Windows.Forms.ComboBox();
-            this.deskBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // custNameLabel
@@ -85,7 +84,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(44, 274);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
+            this.label2.Size = new System.Drawing.Size(185, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "DesktopMaterial Material";
             // 
@@ -160,7 +159,7 @@
             // 
             this.submitButton.Location = new System.Drawing.Point(384, 411);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.Size = new System.Drawing.Size(75, 27);
             this.submitButton.TabIndex = 18;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -170,7 +169,7 @@
             // 
             this.cancelButton.Location = new System.Drawing.Point(491, 411);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.Size = new System.Drawing.Size(75, 27);
             this.cancelButton.TabIndex = 19;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -180,12 +179,6 @@
             // 
             this.surfaceComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.surfaceComboBox.FormattingEnabled = true;
-            this.surfaceComboBox.Items.AddRange(new object[] {
-            "Laminate",
-            "Oak",
-            "Rosewood",
-            "Veneer",
-            "Pine"});
             this.surfaceComboBox.Location = new System.Drawing.Point(445, 271);
             this.surfaceComboBox.Name = "surfaceComboBox";
             this.surfaceComboBox.Size = new System.Drawing.Size(121, 28);
@@ -213,7 +206,6 @@
             this.Controls.Add(this.custNameLabel);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
-            ((System.ComponentModel.ISupportInitialize)(this.deskBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,6 +228,5 @@
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox surfaceComboBox;
-        private System.Windows.Forms.BindingSource deskBindingSource;
     }
 }

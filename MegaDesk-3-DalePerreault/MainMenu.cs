@@ -36,4 +36,20 @@ namespace MegaDesk_4_DalePerreault
             this.Close();
         }
     }
+
+    public class FormProvider
+    {
+        static MainMenu _mainmenu = null;
+        public static MainMenu menu1
+        {
+            get
+            {
+                if (_mainmenu == null)
+                {
+                    _mainmenu = new MainMenu();
+                }
+                return _mainmenu;
+            }
+        }
+    }
 }
