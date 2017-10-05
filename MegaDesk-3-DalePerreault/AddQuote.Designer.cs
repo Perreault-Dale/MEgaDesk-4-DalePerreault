@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_3_DalePerreault
+﻿namespace MegaDesk_4_DalePerreault
 {
     partial class AddQuote
     {
@@ -87,7 +87,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Surface Material";
+            this.label2.Text = "DesktopMaterial Material";
             // 
             // label3
             // 
@@ -190,10 +190,6 @@
             this.surfaceComboBox.Name = "surfaceComboBox";
             this.surfaceComboBox.Size = new System.Drawing.Size(121, 28);
             this.surfaceComboBox.TabIndex = 5;
-            // 
-            // deskBindingSource
-            // 
-            this.deskBindingSource.DataSource = typeof(MegaDesk_3_DalePerreault.Desk);
             // 
             // AddQuote
             // 

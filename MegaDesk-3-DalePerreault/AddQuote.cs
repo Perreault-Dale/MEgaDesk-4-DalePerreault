@@ -2,22 +2,29 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace MegaDesk_3_DalePerreault
+namespace MegaDesk_4_DalePerreault
 {
     public partial class AddQuote : Form
     {
-        static Dictionary<string, Surface> dict = new Dictionary<string, Surface>
+        static Dictionary<string, DesktopMaterial> dict = new Dictionary<string, DesktopMaterial>
         {
-            {"Laminate",Surface.Laminate },
-            {"Oak",Surface.Oak },
-            {"Rosewood",Surface.Rosewood },
-            {"Veneer",Surface.Veneer },
-            {"Pine",Surface.Pine }
+            {"Laminate",DesktopMaterial.Laminate },
+            {"Oak",DesktopMaterial.Oak },
+            {"Rosewood",DesktopMaterial.Rosewood },
+            {"Veneer",DesktopMaterial.Veneer },
+            {"Pine",DesktopMaterial.Pine }
         };
 
         public AddQuote()
         {
             InitializeComponent();
+            List<DesktopMaterial> materials = new List<DesktopMaterial>();
+            foreach(DesktopMaterial dm in Enum.GetValues(typeof(DesktopMaterial)))
+            {
+                materials.Add(dm);
+            }
+            // var message = string.Join(Environment.NewLine, materials);
+            // MessageBox.Show(message);
         }
 
         private void cancelButton_click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace MegaDesk_3_DalePerreault
                 int draw = Convert.ToInt32(drawTextBox.Text);
                 int days;
                 if (!rushCheckBox.Checked) { days = Convert.ToInt32(rushComboBox.SelectedValue); } else { days = 14; }
-                Surface surface = dict[surfaceComboBox.SelectedValue.ToString()];
+                DesktopMaterial surface = dict[surfaceComboBox.SelectedValue.ToString()];
                 Deskquote dq = new Deskquote(name, wide, deep, days, draw, surface);
                 dq.writeQuote();
                 MessageBox.Show("Your order submitted successfully. We will complete the order in " + days + " days.", "Order Submitted");

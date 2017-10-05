@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace MegaDesk_3_DalePerreault
+namespace MegaDesk_4_DalePerreault
 {
     class Deskquote
     {
@@ -13,7 +13,7 @@ namespace MegaDesk_3_DalePerreault
         private int price { get; set; }
 
         // constructor method
-        public Deskquote(string name, int days, int wide, int deep, int draw, Surface surface)
+        public Deskquote(string name, int days, int wide, int deep, int draw, DesktopMaterial surface)
         {
             custName = name;
             custDesk = new Desk(wide, deep, draw, surface);
@@ -29,19 +29,19 @@ namespace MegaDesk_3_DalePerreault
             int cost = 0;
             switch (desk.surface)
             {
-                case Surface.Laminate:
+                case DesktopMaterial.Laminate:
                     cost = 100;
                     break;
-                case Surface.Oak:
+                case DesktopMaterial.Oak:
                     cost = 200;
                     break;
-                case Surface.Pine:
+                case DesktopMaterial.Pine:
                     cost = 50;
                     break;
-                case Surface.Rosewood:
+                case DesktopMaterial.Rosewood:
                     cost = 300;
                     break;
-                case Surface.Veneer:
+                case DesktopMaterial.Veneer:
                     cost = 125;
                     break;
             }

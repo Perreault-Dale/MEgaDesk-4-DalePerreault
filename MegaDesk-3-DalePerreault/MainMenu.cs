@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace MegaDesk_3_DalePerreault
+namespace MegaDesk_4_DalePerreault
 {
     public partial class MainMenu : Form
     {
