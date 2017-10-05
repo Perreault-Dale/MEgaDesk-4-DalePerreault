@@ -6,11 +6,11 @@ namespace MegaDesk_4_DalePerreault
     class Deskquote
     {
         // class members
-        private string custName { get; set; }
-        private Desk custDesk { get; set; }
-        private int prodDays { get; set; }
-        private DateTime orderDate { get; set; }
-        private int price { get; set; }
+        public string custName { get; private set; }
+        public Desk custDesk { get; private set; }
+        public int prodDays { get; private set; }
+        public DateTime orderDate { get; private set; }
+        public int price { get; private set; }
 
         // constructor method
         public Deskquote(string name, int days, int wide, int deep, int draw, DesktopMaterial surface)

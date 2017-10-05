@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MegaDesk_4_DalePerreault
+﻿namespace MegaDesk_4_DalePerreault
 {
     partial class AddQuote
     {
@@ -159,7 +157,7 @@ namespace MegaDesk_4_DalePerreault
             // 
             this.submitButton.Location = new System.Drawing.Point(384, 411);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 27);
+            this.submitButton.Size = new System.Drawing.Size(75, 38);
             this.submitButton.TabIndex = 18;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
@@ -169,7 +167,7 @@ namespace MegaDesk_4_DalePerreault
             // 
             this.cancelButton.Location = new System.Drawing.Point(491, 411);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 27);
+            this.cancelButton.Size = new System.Drawing.Size(75, 38);
             this.cancelButton.TabIndex = 19;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -183,6 +181,7 @@ namespace MegaDesk_4_DalePerreault
             this.surfaceComboBox.Name = "surfaceComboBox";
             this.surfaceComboBox.Size = new System.Drawing.Size(121, 28);
             this.surfaceComboBox.TabIndex = 5;
+            this.surfaceComboBox.DataSource = AddQuote.materials;
             // 
             // AddQuote
             // 

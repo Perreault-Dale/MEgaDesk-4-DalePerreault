@@ -45,7 +45,9 @@ namespace MegaDesk_4_DalePerreault
                 if (!rushCheckBox.Checked) { days = Convert.ToInt32(rushComboBox.SelectedValue); } else { days = 14; }
                 DesktopMaterial surface = (DesktopMaterial)surfaceComboBox.SelectedValue;
                 Deskquote dq = new Deskquote(name, wide, deep, days, draw, surface);
-                MessageBox.Show(dq.ToString());
+                var message = dq.custName + ", " + dq.custDesk.width + "x" + dq.custDesk.depth + "x" + dq.custDesk.drawers;
+                message = message + ", " + dq.custDesk.surface + ", $" + dq.price;
+                MessageBox.Show(message);
                 dq.writeQuote();
                 MessageBox.Show("Your order submitted successfully. We will complete the order in " + days + " days.", "Order Submitted");
             }
