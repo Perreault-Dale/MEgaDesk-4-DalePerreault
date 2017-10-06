@@ -30,7 +30,6 @@
         {
             this.custNameLabel = new System.Windows.Forms.Label();
             this.custNameBox = new System.Windows.Forms.TextBox();
-            this.drawTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.surfaceComboBox = new System.Windows.Forms.ComboBox();
+            this.drawComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // custNameLabel
@@ -60,13 +60,6 @@
             this.custNameBox.Name = "custNameBox";
             this.custNameBox.Size = new System.Drawing.Size(284, 26);
             this.custNameBox.TabIndex = 1;
-            // 
-            // drawTextBox
-            // 
-            this.drawTextBox.Location = new System.Drawing.Point(445, 211);
-            this.drawTextBox.Name = "drawTextBox";
-            this.drawTextBox.Size = new System.Drawing.Size(121, 26);
-            this.drawTextBox.TabIndex = 4;
             // 
             // label1
             // 
@@ -101,6 +94,7 @@
             this.depthTextBox.Name = "depthTextBox";
             this.depthTextBox.Size = new System.Drawing.Size(121, 26);
             this.depthTextBox.TabIndex = 3;
+            this.depthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.DepthTextBox_validating);
             // 
             // label6
             // 
@@ -117,6 +111,7 @@
             this.widthTextBox.Name = "widthTextBox";
             this.widthTextBox.Size = new System.Drawing.Size(121, 26);
             this.widthTextBox.TabIndex = 2;
+            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.WidthTextBox_validating);
             // 
             // label7
             // 
@@ -158,7 +153,7 @@
             this.submitButton.Location = new System.Drawing.Point(384, 411);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 38);
-            this.submitButton.TabIndex = 18;
+            this.submitButton.TabIndex = 8;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_click);
@@ -168,7 +163,7 @@
             this.cancelButton.Location = new System.Drawing.Point(491, 411);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 38);
-            this.cancelButton.TabIndex = 19;
+            this.cancelButton.TabIndex = 9;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_click);
@@ -181,13 +176,31 @@
             this.surfaceComboBox.Name = "surfaceComboBox";
             this.surfaceComboBox.Size = new System.Drawing.Size(121, 28);
             this.surfaceComboBox.TabIndex = 5;
-            this.surfaceComboBox.DataSource = AddQuote.materials;
+            // 
+            // drawComboBox
+            // 
+            this.drawComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drawComboBox.FormattingEnabled = true;
+            this.drawComboBox.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.drawComboBox.Location = new System.Drawing.Point(445, 206);
+            this.drawComboBox.Name = "drawComboBox";
+            this.drawComboBox.Size = new System.Drawing.Size(121, 28);
+            this.drawComboBox.TabIndex = 4;
             // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 529);
+            this.Controls.Add(this.drawComboBox);
             this.Controls.Add(this.surfaceComboBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.submitButton);
@@ -199,7 +212,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.drawTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.custNameBox);
             this.Controls.Add(this.custNameLabel);
@@ -214,7 +226,6 @@
 
         private System.Windows.Forms.Label custNameLabel;
         private System.Windows.Forms.TextBox custNameBox;
-        private System.Windows.Forms.TextBox drawTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -227,5 +238,6 @@
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox surfaceComboBox;
+        private System.Windows.Forms.ComboBox drawComboBox;
     }
 }
